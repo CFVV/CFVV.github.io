@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda — Camila Vera Villa</title>
+<meta name="description" content="Working board: current projects in GeoAI, remote sensing and disaster risk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#210F37;--paper:#FBFAF7;--signal:#9E1C60;--moss:#2E7383;--muted:#54666C;--line:#DDD8CC;--hero-ink:#F0EBF6;--gold:#F0C24B;--maxw:860px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:#1E2A2E;font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--signal)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;text-decoration:none}
+.navlinks{display:flex;gap:20px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.04em}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover,.navlinks a.here{color:var(--signal)}
+@media(max-width:720px){.navlinks{display:none}}
+header{background:var(--ink);color:var(--hero-ink);padding:64px 0 52px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#E9B7D8;margin-bottom:12px}
+h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1}
+.intro{margin-top:14px;max-width:38em;color:#D3C9E4}
+main{padding:52px 0 72px}
+.card{border:1px solid var(--line);background:#fff;border-radius:6px;padding:26px 26px 22px;margin-bottom:20px}
+.card-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.pill{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.pill.now{background:var(--signal);color:#fff}
+.pill.soon{background:var(--gold);color:#3A2E00}
+.pill.always{background:var(--moss);color:#fff}
+.card-top .when{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--muted);letter-spacing:.05em}
+.card h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.18rem;margin-bottom:8px}
+.card>p{color:var(--muted);font-size:.95rem;max-width:52em}
+.qmo{margin-top:16px;display:grid;grid-template-columns:110px 1fr;row-gap:8px;column-gap:16px;font-size:.92rem}
+.qmo dt{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);padding-top:3px}
+.qmo dd{color:#33454B}
+@media(max-width:560px){.qmo{grid-template-columns:1fr}.qmo dt{padding-top:8px}}
+.tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.05em;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+footer{background:var(--ink);color:#A79BC4;padding:36px 0;font-family:"IBM Plex Mono",monospace;font-size:.78rem;margin-top:40px}
+footer .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--hero-ink);text-decoration-color:#E9B7D8}
+a:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="brand" href="index.html">C. Vera Villa</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About me</a>
+      <a href="agenda.html" class="here">Agenda</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#beyond">Beyond</a>
+      <a href="files/CV_CamilaVeraVilla.pdf">CV ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">updated JUL 2026 — working board</div>
+    <h1>Agenda</h1>
+    <p class="intro">Not a blog - a working board. What I am currently building, with what material, and toward which output.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="card">
+    <div class="card-top"><span class="pill now">En curso</span><span class="when">2025 → · PUC × CIGIDEN</span></div>
+    <h3>Anticipating informal settlement growth from satellite imagery</h3>
+    <p>Machine-learning models over multi-year satellite time series to detect and forecast the emergence and expansion of informal settlements in Greater Valparaíso.</p>
+    <dl class="qmo">
+      <dt>Question</dt><dd>Can satellite time series anticipate <em>where</em> informal settlements will emerge, early enough for planning and risk management to act?</dd>
+      <dt>Material</dt><dd>Sentinel-2 and Esri Wayback imagery, labeled settlement polygons (2018–2025), reproducible Python pipelines.</dd>
+      <dt>Output</dt><dd>Predictive model + exposure layer for the SIRVAL territorial risk platform.</dd>
+    </dl>
+    <div class="tags"><span class="tag">Remote sensing</span><span class="tag">Change detection</span><span class="tag">Multi-hazard risk</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><span class="pill now">En curso</span><span class="when">2025 → · IMFD, Cities Group</span></div>
+    <h3>Urban visual elements and geolocated crime</h3>
+    <p>Which predefined visual elements of the streetscape predict or correlate with crime? Building labeled datasets and testing segmentation and object-detection models on Santiago street-view imagery.</p>
+    <dl class="qmo">
+      <dt>Question</dt><dd>Do measurable features of the built environment carry a signal about where crime concentrates — and which ones?</dd>
+      <dt>Material</dt><dd>Street-view imagery of Santiago, geolocated crime records, annotation protocols, segmentation and detection models.</dd>
+      <dt>Output</dt><dd>Labeled dataset + empirical analysis (paper in preparation).</dd>
+    </dl>
+    <div class="tags"><span class="tag">Computer vision</span><span class="tag">Street view</span><span class="tag">Urban safety</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><span class="pill soon">Próximo</span><span class="when">2026-2027 · PUC × CIGIDEN</span></div>
+    <h3>Bringing drone imagery and LiDAR into exposure mapping</h3>
+    <p>Extending current satellite-based pipelines with higher-resolution aerial data, toward multimodal characterization of exposed settlements.</p>
+    <dl class="qmo">
+      <dt>Question</dt><dd>What does sub-meter, 3D information add to exposure models built on open satellite data?</dd>
+      <dt>Material</dt><dd>Drone photogrammetry and LiDAR over priority areas in Valparaíso.</dd>
+      <dt>Output</dt><dd>Multimodal exposure prototypes for SIRVAL.</dd>
+    </dl>
+    <div class="tags"><span class="tag">Multimodal</span><span class="tag">LiDAR</span><span class="tag">Photogrammetry</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><span class="pill now">En curso</span><span class="when">applications: fall 2026 · start: fall 2027</span></div>
+    <h3>PhD applications — GeoAI &amp; disaster resilience</h3>
+    <p>As a Fulbright grantee, preparing applications to doctoral programs in the U.S. at the intersection of computing, geospatial data, and disaster risk. Interested in Earth-observation foundation models and multimodal GeoAI for dynamic exposure mapping in the Global South.</p>
+    <div class="tags"><span class="tag">Fulbright</span><span class="tag">GeoAI</span><span class="tag">Fall 2027</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><span class="pill always">Continuo</span><span class="when">semester 2026 · IMC &amp; School of Engineering, PUC</span></div>
+    <h3>Teaching</h3>
+    <p>Instructor of <em>Data Science</em> and <em>Programming as a Tool for Engineering</em> (undergraduate); teaching assistant, <em>Geospatial Data Science</em> (graduate).</p>
+    <div class="tags"><span class="tag">Teaching</span><span class="tag">Python</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-top"><span class="pill soon">Próximo</span><span class="when">date TBA</span></div>
+    <h3>chess_takes — first exhibition</h3>
+    <p>My photographic project on tournament chess in Chile (<a href="https://www.instagram.com/chess_takes/">@chess_takes</a>) is preparing its first exhibition. <!-- TODO: lugar y fecha cuando estén confirmados --></p>
+    <div class="tags"><span class="tag">Photography</span><span class="tag">Chess</span></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <span>© 2026 Camila Vera Villa</span>
+    <span><a href="mailto:cam.vera@uc.cl">Email</a> · <a href="https://github.com/CFVV">GitHub</a> · <a href="https://scholar.google.com/citations?user=nwHU0cEAAAAJ&hl=en">Scholar</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camila Vera Villa — GeoAI & Disaster Resilience</title>
+<meta name="description" content="Camila Vera Villa — GeoAI researcher working on satellite imagery, machine learning, and disaster resilience in Chile. Fulbright grantee.">
+<meta property="og:title" content="Camila Vera Villa">
+<meta property="og:description" content="GeoAI researcher — satellite imagery, machine learning, and disaster resilience.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#210F37;          /* petrol */ 
+  --paper:#FBFAF7;        /* cool paper */
+  --signal:#9E1C60;       /* fuchsia — used sparingly */
+  --moss:#2E7383;         /* teal for meta labels */
+  --muted:#54666C;        /* secondary text */
+  --line:#DDD8CC;         /* hairlines */
+  --hero-ink:#F0EBF6;     /* text on navy */
+  --maxw:960px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--signal)}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;letter-spacing:.02em;text-decoration:none}
+.navlinks{display:flex;gap:20px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.04em}
+.navlinks a{text-decoration:none;color:var(--muted)}
+.navlinks a:hover{color:var(--signal)}
+@media(max-width:720px){.navlinks{display:none}}
+
+/* ---------- hero ---------- */
+header.hero{background:var(--ink);color:var(--hero-ink);position:relative;overflow:hidden}
+header.hero .wrap{position:relative;padding:88px 24px 72px;display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+@media(max-width:720px){header.hero .wrap{grid-template-columns:1fr;padding:64px 24px 56px}}
+.contours{position:absolute;inset:0;opacity:.10;pointer-events:none}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);margin-bottom:14px}
+header.hero .eyebrow{color:#E9B7D8}
+h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(2.3rem,5.5vw,3.6rem);line-height:1.05;letter-spacing:-.01em}
+.seismo{margin:18px 0 22px;width:min(420px,100%)}
+.seismo path{fill:none;stroke:var(--signal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tagline{font-size:1.12rem;max-width:34em;color:#D3C9E4}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.05em;padding:5px 11px;border:1px solid rgba(234,240,242,.35);border-radius:999px;color:#D3C9E4}
+.hero-links{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:.82rem}
+.hero-links a{color:var(--hero-ink);text-decoration-color:#E9B7D8}
+.portrait{justify-self:end;width:min(280px,70vw)}
+.portrait img{border-radius:6px;border:1px solid rgba(234,240,242,.25);aspect-ratio:4/5;object-fit:cover;background:#37215C}
+.portrait figcaption{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:#A79BC4;margin-top:8px;letter-spacing:.06em}
+.fulbright{display:inline-block;margin-top:20px;font-family:"IBM Plex Mono",monospace;font-size:.75rem;letter-spacing:.06em;color:var(--ink);background:#F0C24B;padding:6px 12px;border-radius:3px}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.7rem;margin-bottom:8px;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:44em;margin-bottom:28px}
+p+p{margin-top:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:720px){.two-col{grid-template-columns:1fr}}
+
+/* cards / entries */
+.entry{padding:20px 0;border-top:1px solid var(--line)}
+.entry:first-of-type{border-top:none}
+.entry .meta{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--moss);margin-bottom:6px}
+.entry h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.12rem;margin-bottom:6px}
+.entry p{color:var(--muted);font-size:.95rem;max-width:46em}
+.entry .links{margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:.78rem;display:flex;gap:16px;flex-wrap:wrap}
+
+/* research grid */
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+@media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);border-radius:6px;padding:22px;background:#fff}
+.rcard .meta{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.08em;color:var(--signal);text-transform:uppercase}
+.rcard h3{font-family:"Space Grotesk",sans-serif;font-size:1.05rem;font-weight:500;margin:8px 0}
+.rcard p{font-size:.9rem;color:var(--muted)}
+
+/* photography strip */
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+@media(max-width:720px){.photo-strip{grid-template-columns:1fr}}
+.photo-strip figure{aspect-ratio:1/1;background:#E9E4D8;border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.photo-strip img{width:100%;height:100%;object-fit:cover}
+.photo-strip .ph{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--muted)}
+
+footer{background:var(--ink);color:#A79BC4;padding:40px 0;font-family:"IBM Plex Mono",monospace;font-size:.78rem}
+footer a{color:var(--hero-ink);text-decoration-color:#E9B7D8}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media(prefers-reduced-motion:no-preference){
+  .seismo path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:trace 2.4s ease-out .3s forwards}
+  @keyframes trace{to{stroke-dashoffset:0}}
+}
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:2px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">C. Vera Villa</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="about.html">About&nbsp;me</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#software">Software</a>
+      <a href="#teaching">Teaching&nbsp;&amp;&nbsp;Outreach</a>
+      <a href="#beyond">Beyond</a>
+      <a href="files/CV_CamilaVeraVilla.pdf">CV ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <!-- subtle contour-line background -->
+  <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#EAF0F2" stroke-width="1">
+      <path d="M-50,480 C200,420 340,520 600,460 S1000,380 1250,440"/>
+      <path d="M-50,430 C220,370 360,470 620,410 S1010,330 1250,390"/>
+      <path d="M-50,380 C240,330 380,420 640,365 S1020,285 1250,340"/>
+      <path d="M-50,330 C260,290 400,370 660,320 S1030,240 1250,290"/>
+      <path d="M-50,280 C280,250 420,320 680,275 S1040,195 1250,240"/>
+      <path d="M-50,230 C300,210 440,270 700,230 S1050,150 1250,190"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">36.84°S&nbsp;&nbsp;73.10°W — San Pedro de la Paz, Chile</div>
+      <h1>Camila Vera Villa</h1>
+      <!-- signature: seismogram trace -->
+      <svg class="seismo" viewBox="0 0 420 46" aria-hidden="true">
+        <path d="M0,23 H60 l4,-3 4,5 4,-4 4,3 6,-9 5,16 5,-22 5,26 4,-30 5,32 4,-26 5,18 5,-12 5,9 5,-7 6,5 6,-4 8,3 8,-2 10,2 14,-1 H420"/>
+      </svg>
+      <p class="tagline">GeoAI researcher at PUC Chile, CIGIDEN and IMFD. I use satellite and street-level imagery with machine learning to map urban exposure and disaster risk — and to turn that data into information decision-makers can actually use. Trained as an architect and teacher before moving into computer science.</p>
+      <div class="tags">
+        <span class="tag">GeoAI</span><span class="tag">Remote Sensing</span><span class="tag">Multi-hazard Risk</span><span class="tag">Urban Informatics</span><span class="tag">Machine Learning</span>
+      </div>
+      <span class="fulbright">FULBRIGHT GRANTEE · PhD APPLICANT, FALL 2027</span>
+      <div class="hero-links">
+        <a href="https://github.com/CFVV">GitHub</a>
+        <a href="https://www.linkedin.com/in/camilaveravilla">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=nwHU0cEAAAAJ&hl=en">Google Scholar</a>
+        <a href="mailto:cam.vera@uc.cl">Email</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="images/foto-github.png" alt="Portrait of Camila Vera Villa">
+      <figcaption>PUC · Santiago, Chile</figcaption>
+    </figure>
+  </div>
+</header>
+
+
+<main class="wrap">
+
+  <section id="about">
+    <div class="eyebrow">33.45°S&nbsp;&nbsp;70.66°W — Santiago, Chile · based at PUC</div>
+    <h2>About</h2>
+    <div class="two-col">
+      <div>
+        <p>I work at the intersection of machine learning and geospatial data, guided by one question: how can Earth observation and urban data become information that helps cities anticipate, withstand, and recover from disasters? Chile — seismic, coastal, and increasingly fire-prone — is both my home and my case study.</p>
+        <p>I came to computer science through cities. Trained first as an architect specialized in territorial urban projects, and as an elementary school teacher, I learned Python to automate design workflows and quickly found a larger use for it: analyzing the urban data behind the problems I had been drawing by hand. That path led to a Master's in Computer Science and to research in GeoAI. <a href="about.html">Read the longer story →</a></p>
+      </div>
+      <div>
+        <p><strong>Now:</strong> GeoAI researcher at Pontificia Universidad Católica de Chile, working with <a href="https://nuevo.cigiden.cl/en/">CIGIDEN</a> (Research Center for Integrated Disaster Risk Management) on satellite-based models to detect and anticipate informal settlement growth in Valparaíso, feeding the SIRVAL territorial risk platform. Also <a href="https://imfd.cl/investigador/english-camila-vera-villa/">research assistant</a> at the Millennium Institute for Foundational Research on Data (IMFD), Cities Group, studying which urban visual elements in street-view imagery correlate with geolocated crime in Santiago.</p>
+        <p><strong>Before:</strong> M.Sc. in Engineering (Computer Science) at PUC — thesis with maximum distinction on urban representation learning; research internship at the National Institute of Informatics (NII), Tokyo, in Prof. Asanobu Kitamoto's GeoAI lab; student researcher at IMFD and Chile's National Center for Artificial Intelligence (CENIA).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="eyebrow">33.05°S&nbsp;&nbsp;71.62°W — Valparaíso · current field of work</div>
+    <h2>Research</h2>
+    <p class="lede">How can Earth-observation foundation models and multimodal GeoAI sustain <em>dynamic</em> models of urban exposure and vulnerability in multi-hazard contexts of the Global South — where labels are scarce and informal settlements change faster than any census?</p>
+    <div class="rgrid">
+      <div class="rcard">
+        <div class="meta">Exposure mapping</div>
+        <h3>Informal settlement detection &amp; forecasting</h3>
+        <p>Supervised models on Sentinel-2, Esri Wayback and high-resolution imagery to predict the emergence and expansion of informal settlements in Valparaíso (2018–2025), with reproducible Python pipelines.</p>
+      </div>
+      <div class="rcard">
+        <div class="meta">Representation learning</div>
+        <h3>Vector representations of cities</h3>
+        <p>Learning urban embeddings from multimodal data — satellite imagery, street networks, sociodemographic attributes — for downstream urban tasks. M.Sc. thesis, maximum distinction.</p>
+      </div>
+      <div class="rcard">
+        <div class="meta">Risk &amp; decision support</div>
+        <h3>Multi-hazard risk platforms</h3>
+        <p>Contributing GeoAI components to SIRVAL, a public territorial-risk platform for Greater Valparaíso integrating earthquakes, tsunamis, wildfires and mass movements for decision-makers.</p>
+      </div>
+      <div class="rcard">
+        <div class="meta">Urban perception &amp; safety</div>
+        <h3>Street-view imagery &amp; crime</h3>
+        <p>Building labeled datasets and testing segmentation and object-detection models on Santiago street-view imagery to identify which urban visual elements predict or correlate with geolocated crime (IMFD, Cities Group).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="eyebrow">DOI 10.1140 — peer-reviewed &amp; theses</div>
+    <h2>Publications</h2>
+    <div class="entry">
+      <div class="meta">Journal article · EPJ Data Science · 2022</div>
+      <h3>Learning to cluster urban areas: two competitive approaches and an empirical validation</h3>
+      <p><strong>Vera, C.</strong>, Lucchini, F., Bro, N., Mendoza, M., Löbel, H., Gutiérrez, F., Dimter, J., Cuchacovic, G., Reyes, A., Valdivieso, H., Alvarado, N., &amp; Toro, S. EPJ Data Science 11, 62.</p>
+      <div class="links"><a href="https://doi.org/10.1140/epjds/s13688-022-00374-2">DOI</a><a href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-022-00374-2">Open access</a></div>
+    </div>
+    <div class="entry">
+      <div class="meta">M.Sc. thesis · PUC · 2024 · Maximum distinction (7.0/7.0)</div>
+      <h3>Vector representation learning for urban task applications</h3>
+      <p>Pontificia Universidad Católica de Chile, M.Sc. in Engineering, Computer Science.</p>
+      <div class="links"><a href="https://repositorio.uc.cl/handle/11534/108444">Repository</a></div>
+    </div>
+    <div class="entry">
+      <div class="meta">Journal article · SoftwareX · 2024</div>
+      <h3>SpatialCluster: A Python library for urban clustering</h3>
+      <p>Reyes, A., Mendoza, M., <strong>Vera, C.</strong>, et al. SoftwareX.</p>
+      <div class="links"><a href="https://www.sciencedirect.com/science/article/pii/S2352711024001109">ScienceDirect (open access)</a></div>
+    </div>
+  </section>
+
+  <section id="software">
+    <div class="eyebrow">pip install — open source</div>
+    <h2>Software</h2>
+    <div class="entry">
+      <div class="meta">Python library</div>
+      <h3>SpatialCluster</h3>
+      <p>A framework for acquiring, comparing, and visualizing urban clustering solutions — implements five spatial clustering methods (DMoN, GMM, KNN, SOM, and information-theoretic clustering), with evaluation metrics and map visualization. Created by Axel Reyes within the IMFD Cities Group; I contributed testing, documentation, and co-authored the SoftwareX paper. Companion library to our EPJ Data Science study.</p>
+      <div class="links"><a href="https://github.com/CFVV/SpatialCluster">GitHub</a><a href="https://pypi.org/project/SpatialCluster/">PyPI</a></div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="eyebrow">33.50°S&nbsp;&nbsp;70.61°W — Santiago · classrooms &amp; airwaves</div>
+    <h2>Teaching &amp; Outreach</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="font-family:'Space Grotesk';font-weight:500;font-size:1.1rem;margin-bottom:10px">Teaching</h3>
+        <p>Adjunct instructor (part-time faculty) at the Institute for Mathematical and Computational Engineering (IMC) and the School of Engineering, PUC, teaching two undergraduate courses — <em>Data Science</em> and <em>Programming as a Tool for Engineering</em> — and teaching assistant for the graduate course in <em>Geospatial Data Science</em>. Before computer science, I was an elementary school teacher, which still shapes how I teach.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Space Grotesk';font-weight:500;font-size:1.1rem;margin-bottom:10px">Outreach</h3>
+        <p>Hosted <a href="https://open.spotify.com/show/6OEeswI1AP29ncOna51IyX">Ellas Programan</a>, a podcast supported by IMFD that interviews women in computing and informatics about their work and paths into the field. Volunteer instructor at programming workshops for girls, and speaker at STEM outreach events.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <div class="eyebrow">a1 → h8 — sixty-four squares</div>
+    <h2>Beyond research</h2>
+    <p class="lede">I photograph chess - the hands, the clocks, the silence before a blunder. My project <a href="https://www.instagram.com/chess_takes/">@chess_takes</a> documents chess tournaments, with a first exhibition coming soon. I have also played violin since 2000, currently with the <a href="https://www.instagram.com/orquesta.uc/">Orquesta Universitaria UC</a>.</p>
+ <div class="photo-strip">
+  <figure>
+    <img src="images/chess1.JPG" alt="Tournament chess photograph 1">
+  </figure>
+
+  <figure>
+    <img src="images/chess2.JPG" alt="Tournament chess photograph 2">
+  </figure>
+
+  <figure>
+    <img src="images/chess3.JPG" alt="Tournament chess photograph 3">
+  </figure>
+<!--
+</div>
+    <p><a href="https://www.instagram.com/chess_takes/">Follow the project on Instagram →</a></p>
+  </section> 
+-->
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Camila Vera Villa</span>
+    <span><a href="mailto:cam.vera@uc.cl">cam.vera@uc.cl</a> · <a href="https://github.com/CFVV">GitHub</a> · <a href="https://www.linkedin.com/in/camilaveravilla">LinkedIn</a> · <a href="agenda.html">Agenda</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
